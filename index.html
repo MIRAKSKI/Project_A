@@ -151,7 +151,7 @@
     </style>
   </head>
   <body>
-    <button onclick="scrooll('s-one')" id="myBtn" title="Go to top">Top</button>
+    <button onclick="scrooll('top')" id="myBtn" title="Go to top">Top</button>
     <!--header-->
 		<div class="header" id="navbar">
 			<div><a href="https://www.univ-ouargla.dz/index.php/en/"><img src="img/ukmo.png" alt="UKMO" height="32"></a></div>
@@ -242,7 +242,13 @@
     screenCheck();
   });
   function scrooll(sec) {
-    $.scrollify.move(`#${sec}`);
+    if (sec != "top") {
+      $.scrollify.move(`#${sec}`);
+    }
+    else {
+      document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+    }
   }
   var prevScrollpos = window.pageYOffset;
 
