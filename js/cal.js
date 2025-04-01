@@ -277,7 +277,7 @@ function choosePI(ind) {
         if (typ[i] == 1 || typ[i] == 2 || typ[i] == "1t" || typ[i] == "2t") {
           tab_d = creatanelemn("td", `Tab_cl ${clss}`, "", "", "", "", "", "", "", "", "", "");
           let id = "EXinp#"+i;
-          let input = creatanelemn("input", "cell_inp", id, "", "", "", "text", "10", "", "", "", "");
+          let input = creatanelemn("input", "cell_inp", id, "", "", "", "text", "10", "", "ClearInpVal(this.id)", "", "");
           input.setAttribute("onchange", "modal_eva(this.id)");
           tab_d.appendChild(input);
         }
@@ -289,7 +289,7 @@ function choosePI(ind) {
         if (typ[i] == 2 || typ[i] == "2t") {
           tab_d = creatanelemn("td", `Tab_cl ${clss}`, "", "", "", "", "", "", "", "", "", "");
           let id = "TDinp#"+i;
-          let input = creatanelemn("input", "cell_inp", id, "", "", "", "text", "10", "", "", "", "");
+          let input = creatanelemn("input", "cell_inp", id, "", "", "", "text", "10", "", "ClearInpVal(this.id)", "", "");
           input.setAttribute("onchange", "modal_eva(this.id)");
           tab_d.appendChild(input);
         }
@@ -301,7 +301,7 @@ function choosePI(ind) {
         if (typ[i] == "t" || typ[i] == "1t" || typ[i] == "2t") {
           tab_d = creatanelemn("td", `Tab_cl ${clss}`, "", "", "", "", "", "", "", "", "", "");
           let id = "TPinp#"+i;
-          let input = creatanelemn("input", "cell_inp", id, "", "", "", "text", "10", "", "", "", "");
+          let input = creatanelemn("input", "cell_inp", id, "", "", "", "text", "10", "", "ClearInpVal(this.id)", "", "");
           input.setAttribute("onchange", "modal_eva(this.id)");
           tab_d.appendChild(input);
         }
@@ -436,6 +436,10 @@ function basic_eval() {
   document.getElementById(`Extract#1`).innerText = tme
   document.getElementById(`eva#6`).innerText = tev;
   document.getElementById(`eva#7`).innerText = tme;
+}
+
+function ClearInpVal(id) {
+  document.getElementById(id).value = "";
 }
 
 setval();
