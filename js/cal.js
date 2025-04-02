@@ -433,7 +433,14 @@ function basic_eval() {
   }
 
   document.getElementById(`Extract#0`).innerText = (Math.round((tev/tcof)*100))/100;
-  document.getElementById(`Extract#1`).innerText = tme
+  let tmvx;
+  if ((Math.round((tev/tcof)*100))/100 >= 10) {
+    tmvx = 30;
+  }
+  else {
+    tmvx = tme;
+  }
+  document.getElementById(`Extract#1`).innerText = tmvx;
   document.getElementById(`eva#6`).innerText = tev;
   document.getElementById(`eva#7`).innerText = tme;
 }
