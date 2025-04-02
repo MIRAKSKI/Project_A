@@ -411,7 +411,7 @@ function modal_eva(id) {
   if (result >= (10 * ciff)) {
     crid = eval(document.getElementById(`cg${ind}#1`).innerText);
   }
-  document.getElementById(`eval#${ind}#6`).innerText = result
+  document.getElementById(`eval#${ind}#6`).innerText = (Math.round(result * 100))/100;
   document.getElementById(`eval#${ind}#7`).innerText = crid;
   basic_eval();
 }
