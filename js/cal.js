@@ -408,7 +408,7 @@ function modal_eva(id) {
   else if (exam == "/" && td == "/" && tp != "/") {
     result = tp * ciff;
   }
-  if (result >= 10) {
+  if (result >= (10 * ciff)) {
     crid = eval(document.getElementById(`cg${ind}#1`).innerText);
   }
   document.getElementById(`eval#${ind}#6`).innerText = result
