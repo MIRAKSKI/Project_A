@@ -393,7 +393,7 @@ function modal_eva(id) {
   try {
     tp = document.getElementById(`TPinp#${ind}`).value;
   } catch (e) {} finally {}
-  if (exam == "/" && td == "/" && tp == "/") {
+  if (exam != "/" && td != "/" && tp != "/") {
     result = ((exam * 0.6) + (((td+tp)/2)*0.4)) * ciff;
   }
   else if (exam != "/" && td != "/" && tp == "/") {
