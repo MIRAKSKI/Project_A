@@ -385,13 +385,13 @@ function modal_eva(id) {
   let exam = "/", td = "/", tp = "/";
   let result, crid = 0, ciff = eval(document.getElementById(`cg${ind}#2`).innerText);;
   try {
-    exam = document.getElementById(`EXinp#${ind}`).value;
+    exam = eval(document.getElementById(`EXinp#${ind}`).value);
   } catch (e) {} finally {}
   try {
-    td = document.getElementById(`TDinp#${ind}`).value;
+    td = eval(document.getElementById(`TDinp#${ind}`).value);
   } catch (e) {} finally {}
   try {
-    tp = document.getElementById(`TPinp#${ind}`).value;
+    tp = eval(document.getElementById(`TPinp#${ind}`).value);
   } catch (e) {} finally {}
   if (exam != "/" && td != "/" && tp != "/") {
     result = ((exam * 0.6) + (((td+tp)/2)*0.4)) * ciff;
